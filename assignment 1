@@ -1,0 +1,49 @@
+class Customer:
+    def __init__(self, name, address, vehicle_no, contact_no, nic_no, customer_type="General"):
+        self.customer_name = name
+        self.address = address
+        self.vehicle_no = vehicle_no
+        self.contact_no = contact_no
+        #self.nic_no = nic_no
+        #self.customer_type = customer_type
+
+    def add_customer():
+        customer_info = []
+        maxlengthlist = 100
+        while len(customer_info) < maxlengthlist:
+                    customer_name  = input("Customer Name :")
+                    address        = input("Address:")
+                    vehicle_no     = input("Vehicle Number:")
+                    contact_no     = input("Contact Number:")
+                    customerl = [customer_name,address,vehicle_no,contact_no]
+                    customer_info.append(customerl)
+                    print(customer_info)
+                    return customer_info
+
+    def remove_customer():
+
+
+
+
+class Clean_park:
+    def select_option(self):
+        while True:
+            print("Welcome to Clean park daily car service")
+            print("Select Options")
+            print("No.1 to register a new customer")
+            print("No.2 to remove a new customer")
+            print("No.3 to update customer details")
+            print("No.4 to view customer details")
+            print("No.5 to request for a service")
+            print("No.6 to add the service to queue")
+            print("No.7 to remover service from queue")
+            print("No.8 to view the service status")
+            choice = int(input("Select option: "))
+            if choice is 1:
+                Customer.add_customer()
+            if choice is 2:
+                Customer.remove_customer()
+
+
+menu1 = Clean_park()
+menu1.select_option()
